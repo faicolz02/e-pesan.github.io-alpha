@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singgah dulu! Nanti kumpau.</title>
+    <link rel="stylesheet" href="style-2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍔 (E-pesan) Restoran RMY</h1>
+      <p>Order Online & Bayar di kaunter via "Cash or Duitnow QR"</p>
+      <img src="images/Kopi.jpg" alt="Logo" class="logo" />
+    </header>
+
+    <!-- Category Filter -->
+    <div class="categories">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="fav">Frequent menu</button>
+      <button class="category-btn" data-category="rice">Nasi Goreng</button>
+      <button class="category-btn" data-category="noodles">
+        Mee/Mihun/KueyTeow/Maggi
+      </button>
+      <button class="category-btn" data-category="other">Lain-lain</button>
+      <button class="category-btn" data-category="drinks">Minuman</button>
+    </div>
+
+    <!-- Menu Container (Dynamically Loaded) -->
+    <div id="menu-container" class="menu-container"></div>
+
+    <!-- Order Cart -->
+    <div class="cart">
+      <h2>🛒 Your Order</h2>
+      <div id="cart-items"></div>
+      <p>Total: Rm<span id="total">0.00</span></p>
+    </div>
+
+    <!-- Order Form -->
+    <form id="order-form">
+      <div id="dinein-fields" style="display: none">
+        <h3>Table #<span id="display-table-number"></span></h3>
+      </div>
+      <div id="takeaway-fields" style="display: none">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="datetime-local" name="pickup-time" required />
+      </div>
+
+      <button type="submit">Pesan Sekarang!</button>
+    </form>
+
+    <!-- QR Code for In-Store Scanning -->
+    <div class="qr-code">
+      <h3>Scan to Order</h3>
+      <img src="images/spay-qr.jpg" alt="QR Code" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
